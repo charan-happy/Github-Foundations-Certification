@@ -75,9 +75,9 @@ around the longest. Github is primarily where most of the opensource projects ar
 
 `Go to your Profile (Top Right ) >> Settings >> passwords and authentication`
 
-![alt text](image-1.png)
+![alt text](Images/image-1.png)
 
-![alt text](image.png)
+![alt text](Images/image.png)
 
 
 ## Create a Github Account
