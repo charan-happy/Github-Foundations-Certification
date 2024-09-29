@@ -6,6 +6,15 @@
 ## commits
 - when we wanted to commit the code, we can write git commit which will open up the commit. Edit message in the editor of the choice.
 `git commit -m <message>`  
+
+Components of git commit :  
+- commit hash: A unique SHA-1 hash identifier for the commit
+- Author Information: The name and email of the person who made the commit
+- Commit Message: A description of what changes the commit contains
+- Timestamp: The date and time when the commit was made
+- Parent commit Hash(es): The SHA-1 hash of the commit(s) this commit is based on 
+- Snapshot of Content: A snapshot of the project at the time of the commit (not the actual files, but references to them)
+
 set the global editor `git config --global core.editor emacs`
 
 - we have 3 ways to clone a repo:  
@@ -41,18 +50,48 @@ gh auth login
 gh repo clone <github cli repo url>
 ```
 ## Branches
+- A git branch is a divergence of the state of the repo
+( we can think of branches as being copies of a point in time that have been modified to be different )
 `git branch` --> To create a list of branches
 `git branch <branch-name>` --> To create a branch
 `git checkout -b <branch-name>` --> TO create and enter into the newly created branch
 
+![alt text](image.png)
+
+```
+git branch # List all local branches
+git branch [branch-name] #create a new branch
+git checkout [branch-name] #checkout (switch) to a branch
+git checkout -b [branch-name] #create and checkout a branch
+git branch -d [branch-name] #deletes a branch
+git branch -m [old-name] [new-name] #Renames a branch
+git branch -a #lists both remote and local branches
+```
+
 ## Remotes
+- A git remote represents the reference to remote location where a copy of the repository is hosted
+```
+- you can have multiple remote entries for your git repo
+ "origin" as a remote name almost always seen for a repo
+ > It Indicates the central or golden repo everyone is working from and represents the source of truth
+```
+- The remote entries are stored in `.git/config`
 - we can add remote but often you will just add remote via upstream when adding a branch
 
 ```
 git remote add .
 git branch -u origin new-feature
 ```
-
+```
+git remote -v #lists all remote repositories along with their URLs
+git remote add [name] [URL]
+git remote remove [name]
+git remote rename [old-name] [new-name]
+git push [remote-name] [branch] #pushes a branch and its commits to the specific remote
+git pull [remote-name] [branch] #pulls updates from a remote branch
+git fetch [remote-name] #fetch updates without pulling
+```
+![upstream vs downstream](image-1.png)
 ## Stashing
 
 ```
@@ -99,3 +138,6 @@ git push
 git remote add <name> <url> and then git push <name>
 ```
 
+## Github cli
+
+![alt text](image-2.png)

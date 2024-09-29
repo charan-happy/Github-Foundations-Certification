@@ -130,9 +130,29 @@ You can perform actions such as :
 - starring
 - cloning(downloading)
 
+## Github CLI
 
+## Deploy keys
+- Deploy keys allows you attach public keys directly to a Git Repo
+- The use-case for deploy keys are for  :
+ **Build servers or CI/CD third-party** services that needs to clone the repo so they perform a build or a deploy  
+ **Single Repo Access** so instead of using a shared keypair for multiple repos you have a single key pair for a single GIT Repo
+ > Avoid using **Personal Access Tokens**
 
+ - **Personal Access Tokens (PAT)** are an alternative to using passwords for authentication to github when using the Github API or command line.
 
+ - PATs are found under `Developer settings` section under user profile.
+ - Github has two types of PATs:
+ > Classic Tokens
+   - They are less secure and no longer recommended for use
+   - Customer's with legacy systems may be still using classic token
+> Fine-grained personal access tokens
+  - Granted specific permissions
+  - Must have an expiry date
+  - can only access  specific repositories
+  - can only access resources owned by a single user or organization
+
+  
 
 
 
