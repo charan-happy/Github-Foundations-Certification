@@ -152,8 +152,21 @@ You can perform actions such as :
   - can only access  specific repositories
   - can only access resources owned by a single user or organization
 
-  
+## Github APIS
+- Github has 2 APIs. 1. **REST API** and 2. **GraphQL API**
 
+|Feature | REST API| GraphQL API |
+| --- | --- | --- |
+| Design Philosophy | Resource Based, different end points per resouce | single endpoint, query for precise data requests |
+| HTTP Methods | Uses GET, POST, PUT, DELETE for operations | Mainly uses POST for all operations |
+| Data Fetching | Multiple requests for related data | single request for complex, related data |
+| Over-fetching/Under-fetching | Can have over-fetching or under-fetching | Precise data fetching, no over/under-fetching |
+| Performance | Less efficient for complex systems | More efficient for complex queries |
+| Caching | Easier due to complex systems | More efficient for complex queries |
+| Learning Curve |Generally easier to learn | Steeper but offers powerful features |
+| Flexibility | Server-driven structure | client-driven, highly flexible |
+| Versioning | Often requires API versioning | Less need for versioning |
+| Ecosystem |Mature with extension of tools | Growing with unique tools for queries |
 
 
 
